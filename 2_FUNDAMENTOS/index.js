@@ -21,3 +21,8 @@ console.log(a);
 console.log(typeof a);
 a = true;
 console.log(a);
+// 4- interface e annotation 
+var ann = "teste";
+var inf = "Teste";
+// ann = 1
+// inf = 1
