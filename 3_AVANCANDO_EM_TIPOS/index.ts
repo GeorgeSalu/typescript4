@@ -25,9 +25,15 @@ function soma(a: number, b: number) {
 soma(4,5)
 
 // 5 - retorna de funcao
-
 function greeting(name: string): string {
   return `Ola ${name}`
 }
 
 console.log(greeting("george"))
+
+// 6 - funcao anonima
+setTimeout(function() {
+  const sallary: number = 1000
+
+  //console.log(parseFloat(sallary))
+}, 200)
