@@ -15,3 +15,11 @@ console.log(nums)
 const arr1: any = [1, "teste", true, [], {nome: "mateus"}]
 console.log(arr1)
 arr1.push([1,2,3])
+
+// 4 - parametros tipados
+
+function soma(a: number, b: number) {
+  console.log(a + b)
+}
+
+soma(4,5)
