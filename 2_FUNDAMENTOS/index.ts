@@ -36,3 +36,4 @@ let inf = "Teste"
 
 // ann = 1
 // inf = 1
+console.log("testando tsc -w")
