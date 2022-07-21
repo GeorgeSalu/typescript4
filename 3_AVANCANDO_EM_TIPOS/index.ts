@@ -153,3 +153,10 @@ n = 1000n
 
 console.log(n)
 console.log(typeof n)
+
+// 18 - symbol
+let symbolA: symbol = Symbol("a")
+let symbolB = Symbol("a")
+
+console.log(symbolA == symbolB)
+console.log(symbolA === symbolB)
