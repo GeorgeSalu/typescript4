@@ -84,3 +84,8 @@ const coordObj = {
 showCoords(coordObj);
 const somePerson = { name: "george", age: 12 };
 console.log(somePerson);
+// 15 - literal types
+function showDirection(direction) {
+    console.log(`A direcao é : ${direction}`);
+}
+showDirection("left");
