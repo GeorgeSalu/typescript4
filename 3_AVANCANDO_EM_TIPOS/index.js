@@ -89,3 +89,6 @@ function showDirection(direction) {
     console.log(`A direcao é : ${direction}`);
 }
 showDirection("left");
+// 16 - non null assertion operation 
+const p = document.getElementById("some-p");
+console.log(p.innerText);
