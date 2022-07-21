@@ -59,3 +59,12 @@ function showBalance(balance) {
 showBalance(100);
 showBalance("500");
 const arr2 = [1, "teste", true];
+// 11 - avancando em union types
+function showUserRole(role) {
+    if (typeof role === "boolean") {
+        return "usuario não aprovado";
+    }
+    return `A funcao do usuerio é : ${role}`;
+}
+console.log(showUserRole(false));
+console.log(showUserRole("Admin"));
