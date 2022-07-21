@@ -59,3 +59,14 @@ function showNumbers(a: number, b: number, c?: number) {
 
 showNumbers(1,2,3)
 showNumbers(1,2)
+
+// 9 - validando argumento opcional
+function advancedGreeting(firstName: string, lastName?: string) {
+  if(lastName !== undefined) {
+    return `Ola, ${firstName} ${lastName}, tudo bem ?`
+  }
+  return `Ola, ${firstName}, tudo bem ?`
+}
+
+console.log(advancedGreeting("mateus", "battisti"))
+console.log(advancedGreeting("joaquim"))

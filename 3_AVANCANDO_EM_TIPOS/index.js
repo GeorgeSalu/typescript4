@@ -43,3 +43,12 @@ function showNumbers(a, b, c) {
 }
 showNumbers(1, 2, 3);
 showNumbers(1, 2);
+// 9 - validando argumento opcional
+function advancedGreeting(firstName, lastName) {
+    if (lastName !== undefined) {
+        return `Ola, ${firstName} ${lastName}, tudo bem ?`;
+    }
+    return `Ola, ${firstName}, tudo bem ?`;
+}
+console.log(advancedGreeting("mateus", "battisti"));
+console.log(advancedGreeting("joaquim"));
