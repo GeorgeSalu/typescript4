@@ -70,3 +70,11 @@ function advancedGreeting(firstName: string, lastName?: string) {
 
 console.log(advancedGreeting("mateus", "battisti"))
 console.log(advancedGreeting("joaquim"))
+
+// 10 - union type
+function showBalance(balance: string | number) {
+  console.log(`O saldo da conta é R$ ${balance}`)
+}
+
+showBalance(100)
+showBalance("500")
