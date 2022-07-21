@@ -58,3 +58,24 @@ function userGreeting(user) {
 }
 userGreeting(jhon);
 userGreeting(paul);
+// 4 - operador in
+class Dog {
+    constructor(name, breed) {
+        this.name = name;
+        if (breed) {
+            this.breed = breed;
+        }
+    }
+}
+const turca = new Dog("turca");
+const bob = new Dog("Bob", "Partor alemão");
+function showDogDetails(dog) {
+    if ('breed' in dog) {
+        console.log(`O cachorro e da raça ${dog.breed}`);
+    }
+    else {
+        console.log(`o cachorro é um srd`);
+    }
+}
+showDogDetails(turca);
+showDogDetails(bob);
