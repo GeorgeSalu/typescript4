@@ -82,3 +82,5 @@ const coordObj = {
     z: 20
 };
 showCoords(coordObj);
+const somePerson = { name: "george", age: 12 };
+console.log(somePerson);
