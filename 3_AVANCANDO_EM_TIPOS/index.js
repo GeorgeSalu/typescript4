@@ -35,3 +35,11 @@ function passCorrdinates(coord) {
 const objCorrd = { x: 21, y: 22 };
 passCorrdinates(objCorrd);
 const pessoaObj = { nome: "george", surname: "silva" };
+//8 - props opcionais
+function showNumbers(a, b, c) {
+    console.log("A : " + a);
+    console.log("B : " + b);
+    console.log("C : " + c);
+}
+showNumbers(1, 2, 3);
+showNumbers(1, 2);
