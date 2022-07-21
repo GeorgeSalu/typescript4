@@ -32,7 +32,7 @@ operations([1,2,3])
 operations([1,2,3], "sum")
 operations([1,2,3], "multiply")
 
-// 3 - instanceOd
+// 3 - instanceOF
 class User {
   name
 
