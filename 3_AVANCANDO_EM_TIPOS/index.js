@@ -58,3 +58,4 @@ function showBalance(balance) {
 }
 showBalance(100);
 showBalance("500");
+const arr2 = [1, "teste", true];
