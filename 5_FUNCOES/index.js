@@ -62,3 +62,8 @@ function somaDefault(n, m = 10) {
 }
 console.log(somaDefault(10));
 console.log(somaDefault(10, 12));
+// 8 - unknown
+function doSomething(x) {
+    console.log(x);
+}
+doSomething("1");

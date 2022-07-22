@@ -81,3 +81,10 @@ function somaDefault(n: number, m = 10) {
 
 console.log(somaDefault(10))
 console.log(somaDefault(10, 12))
+
+// 8 - unknown
+function doSomething(x: unknown) {
+  console.log(x)
+}
+
+doSomething("1")
