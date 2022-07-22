@@ -84,7 +84,12 @@ console.log(somaDefault(10, 12))
 
 // 8 - unknown
 function doSomething(x: unknown) {
-  console.log(x)
+  if(Array.isArray(x)) {
+    console.log(x[0])
+  } else if(typeof x === "number") {
+    console.log("x é um numero")
+  }
 }
 
-doSomething("1")
+doSomething([1,2,3])
+doSomething(5)
