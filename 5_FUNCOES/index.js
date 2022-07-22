@@ -56,3 +56,9 @@ function modernGreeting(name, greet) {
     return `Ola ${name}, tudo bem`;
 }
 console.log(modernGreeting("george"));
+// 7 - paramentro default
+function somaDefault(n, m = 10) {
+    return n + m;
+}
+console.log(somaDefault(10));
+console.log(somaDefault(10, 12));

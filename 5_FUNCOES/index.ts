@@ -73,3 +73,11 @@ function modernGreeting(name: string, greet?: string) {
 }
 
 console.log(modernGreeting("george"))
+
+// 7 - paramentro default
+function somaDefault(n: number, m = 10) {
+  return n + m
+}
+
+console.log(somaDefault(10))
+console.log(somaDefault(10, 12))
