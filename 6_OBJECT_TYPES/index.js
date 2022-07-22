@@ -11,3 +11,18 @@ const shirt = {
     isAvailable: true
 };
 showProductDetails(shirt);
+function showUSerDetails(user) {
+    console.log(`O usuario tem o e-mail : ${user.email}`);
+    if (user.role) {
+        console.log(`A funcao do usuario é : ${user.role}`);
+    }
+}
+const u1 = { email: "matues@gmail.com", role: "admin" };
+const u2 = { email: "joao@gmail.com" };
+showUSerDetails(u1);
+showUSerDetails(u2);
+const fusca = {
+    brand: "VW",
+    wheels: 4
+};
+console.log(fusca);

@@ -19,3 +19,35 @@ const shirt: Product = {
 }
 
 showProductDetails(shirt)
+
+// 2- propriedade opcional em interface
+interface User {
+  email: string,
+  role?: string
+}
+
+function showUSerDetails(user: User) {
+  console.log(`O usuario tem o e-mail : ${user.email}`)
+  if(user.role) {
+    console.log(`A funcao do usuario é : ${user.role}`)
+  }
+}
+
+const u1: User = {email: "matues@gmail.com", role: "admin"}
+const u2: User = {email: "joao@gmail.com"}
+
+showUSerDetails(u1)
+showUSerDetails(u2)
+
+// 3 - readonly
+interface Car {
+  brand: string
+  readonly wheels: number
+}
+
+const fusca: Car = {
+  brand: "VW",
+  wheels: 4
+}
+
+console.log(fusca)
