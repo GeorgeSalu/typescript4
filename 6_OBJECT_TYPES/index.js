@@ -49,3 +49,10 @@ const arnold = {
 };
 console.log(arnold);
 console.log(arnold.caliber);
+// 7 - readonly array
+let myArray = ["maca", "laranja", "banana"];
+//myArray[3] = "mamao"
+console.log(myArray);
+myArray.forEach((item) => {
+    console.log("fruta : " + item);
+});
