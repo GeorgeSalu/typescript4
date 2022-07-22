@@ -98,3 +98,10 @@ doSomething(5)
 function showErrorMessage(msg: string): never {
   throw new Error(msg)
 }
+
+// 10 - rest operator
+function sumAll(...n: number[]) {
+  return n.reduce((number, sum) => sum + number)
+}
+
+console.log(sumAll(1,2,3,4,5))
