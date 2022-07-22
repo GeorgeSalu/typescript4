@@ -58,3 +58,9 @@ myArray.forEach((item) => {
 });
 const myNumberArray = [1, 2, 3, 4, 5];
 //const myNumberArray2: fiveNumbers = [1,2,3,4,5,6]
+// 9 - tuplas com readonly
+function showNumbers(numbers) {
+    console.log(numbers[0]);
+    console.log(numbers[1]);
+}
+showNumbers([1, 2]);
