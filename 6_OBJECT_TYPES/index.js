@@ -56,3 +56,5 @@ console.log(myArray);
 myArray.forEach((item) => {
     console.log("fruta : " + item);
 });
+const myNumberArray = [1, 2, 3, 4, 5];
+//const myNumberArray2: fiveNumbers = [1,2,3,4,5,6]

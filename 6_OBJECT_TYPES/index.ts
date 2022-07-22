@@ -118,3 +118,9 @@ console.log(myArray)
 myArray.forEach((item) => {
   console.log("fruta : "+item)
 })
+
+// 8 - tuplas
+type fiveNumbers = [number, number, number, number, number]
+
+const myNumberArray: fiveNumbers = [1,2,3,4,5]
+//const myNumberArray2: fiveNumbers = [1,2,3,4,5,6]
