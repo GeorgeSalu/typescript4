@@ -105,3 +105,12 @@ function sumAll(...n: number[]) {
 }
 
 console.log(sumAll(1,2,3,4,5))
+
+// 11 - destructuring como parametro
+function showProductDetails({name, price} : {name: string, price: number}): string {
+  return `O nome do produto é ${name} e ele custa ${price}`
+}
+
+const shirt = {name: "camisa", price: 12}
+
+console.log(showProductDetails(shirt))
