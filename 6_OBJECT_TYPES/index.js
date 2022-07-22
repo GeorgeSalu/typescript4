@@ -31,3 +31,14 @@ let coords = {
 };
 coords.y = 15;
 console.log(coords);
+const matheus = {
+    name: "matheus",
+    age: 30
+};
+console.log(matheus);
+const goku = {
+    name: "Goku",
+    age: 50,
+    superpowers: ["hamehamera", "gemkidama"]
+};
+console.log(goku);

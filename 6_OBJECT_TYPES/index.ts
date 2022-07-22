@@ -63,3 +63,28 @@ let coords: CoordObject = {
 
 coords.y = 15
 console.log(coords)
+
+// 5 - extending interfaces
+interface Human {
+  name: string
+  age: number
+}
+
+interface SuperHuman extends Human {
+  superpowers: string[]
+}
+
+const matheus: Human = {
+  name: "matheus",
+  age: 30
+}
+
+console.log(matheus)
+
+const goku: SuperHuman = {
+  name: "Goku",
+  age: 50,
+  superpowers: ["hamehamera", "gemkidama"]
+}
+
+console.log(goku)
