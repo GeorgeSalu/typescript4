@@ -56,4 +56,4 @@ const newCar = {
 };
 showKm(newCar.km);
 const someVar = 5;
-//const someVar2:myType = "teste"
+const testing = "some teste";

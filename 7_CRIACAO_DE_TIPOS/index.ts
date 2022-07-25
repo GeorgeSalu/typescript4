@@ -103,3 +103,10 @@ interface B extends A {}
 type myType = B extends A ? number : string
 const someVar:myType = 5
 //const someVar2:myType = "teste"
+
+// 9 - template literal types
+type testA = "teste"
+
+type CustomType = `some ${testA}`
+
+const testing: CustomType = "some teste"
