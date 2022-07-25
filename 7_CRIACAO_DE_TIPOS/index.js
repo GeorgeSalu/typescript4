@@ -28,3 +28,12 @@ const server = {
     ram: "32gb"
 };
 console.log(getSomeKey(server, "ram"));
+function showCharName(obj, name) {
+    return `${obj[name]}`;
+}
+const myChar = {
+    name: "mateus",
+    age: 30,
+    hasDriveLicense: true
+};
+console.log(showCharName(myCar, "name"));

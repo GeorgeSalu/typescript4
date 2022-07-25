@@ -47,3 +47,19 @@ const server = {
 }
 
 console.log(getSomeKey(server, "ram"))
+
+// 5 - keyof type operator
+type Character = {name: string, age: number, hasDriveLicense: boolean}
+type C = keyof Character
+
+function showCharName(obj: Character, name: C) : string {
+  return `${obj[name]}`
+}
+
+const myChar: Character = {
+  name: "mateus",
+  age: 30,
+  hasDriveLicense: true
+}
+
+console.log(showCharName(myCar, "name"))
