@@ -93,3 +93,21 @@ class Truck {
 
 const volvo = new Truck("volvo", 400)
 volvo.showDetails()
+
+// 7 - getters
+class Person {
+  name
+  surname
+
+  constructor(name: string, surname: string) {
+    this.name = name
+    this.surname = surname
+  }
+
+  get fullName() {
+    return this.name + " " + this.surname
+  }
+}
+
+const george = new Person("george", "silva")
+console.log(george.fullName)
