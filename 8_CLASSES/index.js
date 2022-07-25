@@ -51,3 +51,15 @@ class Dwarf {
 const jimy = new Dwarf("jimy");
 jimy.greeting();
 console.log(jimy);
+// 6 - this
+class Truck {
+    constructor(model, hp) {
+        this.model = model;
+        this.hp = hp;
+    }
+    showDetails() {
+        console.log(`Caminhao do modelo : ${this.model}, que tem ${this.hp} cavalos de potencia`);
+    }
+}
+const volvo = new Truck("volvo", 400);
+volvo.showDetails();
