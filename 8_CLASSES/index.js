@@ -15,3 +15,12 @@ class NewUser {
 }
 const joao = new NewUser("joao", 22);
 console.log(joao);
+// 3 - campo readonly
+class Car {
+    constructor(name) {
+        this.wheels = 4;
+        this.name = name;
+    }
+}
+const fusca = new Car("fusca");
+console.log(fusca);
