@@ -62,4 +62,4 @@ const myChar: Character = {
   hasDriveLicense: true
 }
 
-console.log(showCharName(myCar, "name"))
+console.log(showCharName(myChar, "name"))

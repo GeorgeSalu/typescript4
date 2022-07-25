@@ -36,4 +36,4 @@ const myChar = {
     age: 30,
     hasDriveLicense: true
 };
-console.log(showCharName(myCar, "name"));
+console.log(showCharName(myChar, "name"));
