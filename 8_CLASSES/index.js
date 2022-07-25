@@ -110,3 +110,16 @@ class blogPost {
 }
 const myPost = new blogPost("hello world");
 console.log(myPost.itemTitle());
+// 10 0 override de metodos
+class Base {
+    someMethod() {
+        console.log("Alguma coisa");
+    }
+}
+class Nova extends Base {
+    someMethod() {
+        console.log("testando alguma coisa");
+    }
+}
+const myObject = new Nova();
+myObject.someMethod();
