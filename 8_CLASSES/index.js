@@ -100,3 +100,13 @@ myCoords.fillx = 15;
 myCoords.filly = 10;
 console.log(myCoords);
 console.log(myCoords.getCoords);
+class blogPost {
+    constructor(title) {
+        this.title = title;
+    }
+    itemTitle() {
+        return `O titulo do post é : ${this.title}`;
+    }
+}
+const myPost = new blogPost("hello world");
+console.log(myPost.itemTitle());

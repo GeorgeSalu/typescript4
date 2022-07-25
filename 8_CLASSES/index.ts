@@ -143,3 +143,23 @@ myCoords.fillx = 15
 myCoords.filly = 10
 console.log(myCoords)
 console.log(myCoords.getCoords)
+
+// 9 - implements
+interface showTitle {
+  itemTitle(): string
+}
+
+class blogPost implements showTitle {
+  title
+
+  constructor(title: string) {
+    this.title = title
+  }
+
+  itemTitle(): string {
+    return `O titulo do post é : ${this.title}`
+  }
+}
+
+const myPost = new blogPost("hello world")
+console.log(myPost.itemTitle())
