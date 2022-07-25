@@ -75,3 +75,28 @@ class Person {
 }
 const george = new Person("george", "silva");
 console.log(george.fullName);
+// 8 - setters
+class Coords {
+    set fillx(x) {
+        if (x === 0) {
+            return;
+        }
+        this.x = x;
+        console.log("x inserido com sucesso");
+    }
+    set filly(y) {
+        if (y === 0) {
+            return;
+        }
+        this.y = y;
+        console.log("y inserido com sucesso");
+    }
+    get getCoords() {
+        return `X: ${this.x} e Y: ${this.y}`;
+    }
+}
+const myCoords = new Coords();
+myCoords.fillx = 15;
+myCoords.filly = 10;
+console.log(myCoords);
+console.log(myCoords.getCoords);
