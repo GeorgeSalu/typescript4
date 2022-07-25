@@ -193,3 +193,19 @@ const cInstance = new C()
 console.log(cInstance.x)
 const dInstance = new D()
 console.log(dInstance)
+
+// 12 - protected
+class E {
+  protected x = 13
+}
+
+class F extends E {
+
+  showX() {
+    console.log("x "+this.x)
+  }
+
+}
+
+const fInstance = new F()
+fInstance.showX()
