@@ -37,3 +37,7 @@ const myChar = {
     hasDriveLicense: true
 };
 console.log(showCharName(myChar, "name"));
+// 6 - typeof type operator
+const userName = "mateus";
+const userName2 = "joao";
+const userName4 = "joaquim";
