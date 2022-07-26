@@ -148,3 +148,14 @@ class F extends E {
 }
 const fInstance = new F();
 fInstance.showX();
+// 13 - private
+class PrivateClass {
+    constructor() {
+        this.name = "private";
+    }
+    showName() {
+        return this.name;
+    }
+}
+const pObj = new PrivateClass();
+console.log(pObj.showName());
