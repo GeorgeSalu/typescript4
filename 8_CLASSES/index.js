@@ -168,3 +168,12 @@ class StaticMembers {
 StaticMembers.prop = "Teste static";
 console.log(StaticMembers.prop);
 StaticMembers.staticMethod();
+// 15 - generic class
+class Item {
+    constructor(first, second) {
+        this.first = first;
+        this.second = second;
+    }
+}
+const newItem = new Item("Caixa", "supresa");
+console.log(newItem);

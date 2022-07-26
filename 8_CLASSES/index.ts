@@ -235,3 +235,17 @@ class StaticMembers {
 console.log(StaticMembers.prop)
 
 StaticMembers.staticMethod()
+
+// 15 - generic class
+class Item<T, U> {
+  first
+  second
+
+  constructor(first: T, second: U) {
+    this.first = first
+    this.second = second
+  }
+}
+
+const newItem = new Item("Caixa", "supresa")
+console.log(newItem)
