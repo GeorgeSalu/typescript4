@@ -24,3 +24,19 @@ console.log(name)
 import * as myNumbers from './numbers'
 
 console.log(myNumbers)
+
+// 6 - importando tipos
+import { Human } from "./myType";
+
+class USer implements Human {
+  name: string;
+  age: number
+
+  constructor(name: string, age: number) {
+    this.name = name
+    this.age = age
+  }
+}
+
+const joao = new USer("joao", 10)
+console.log(joao)
