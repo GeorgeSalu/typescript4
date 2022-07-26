@@ -177,3 +177,24 @@ class Item {
 }
 const newItem = new Item("Caixa", "supresa");
 console.log(newItem);
+// 16 - parameter properties
+class ParameterProperties {
+    constructor(name, qty, price) {
+        this.name = name;
+        this.qty = qty;
+        this.price = price;
+        this.name = name;
+        this.qty = qty;
+        this.price = price;
+    }
+    get showQty() {
+        return `Qtd total : ${this.qty}`;
+    }
+    get showPrice() {
+        return `Qtd total : ${this.price}`;
+    }
+}
+const newShirt = new ParameterProperties("camisa", 5, 19.9);
+console.log(newShirt);
+console.log(newShirt.showPrice);
+console.log(newShirt.showQty);
