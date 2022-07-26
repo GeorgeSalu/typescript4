@@ -4,5 +4,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 // i - importacao de arquivos
-const greet_js_1 = __importDefault(require("./greet.js"));
-(0, greet_js_1.default)();
+const greet_1 = __importDefault(require("./greet"));
+(0, greet_1.default)();
+// 2 - import de variavel
+const variable_1 = require("./variable");
+console.log(variable_1.x);
