@@ -159,3 +159,12 @@ class PrivateClass {
 }
 const pObj = new PrivateClass();
 console.log(pObj.showName());
+// 14 - static members
+class StaticMembers {
+    static staticMethod() {
+        console.log("este é um metodo estatico");
+    }
+}
+StaticMembers.prop = "Teste static";
+console.log(StaticMembers.prop);
+StaticMembers.staticMethod();
