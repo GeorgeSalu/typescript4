@@ -64,3 +64,22 @@ User = __decorate([
 ], User);
 const matheus = new User("matheus");
 console.log(matheus);
+// 4 - method decorator
+function enumerable(value) {
+    return function (target, propertKey, descriptor) {
+        descriptor.enumerable = value;
+    };
+}
+class Machine {
+    constructor(name) {
+        this.name = name;
+    }
+    showName() {
+        return `O nome da maquina é : ${this.name}`;
+    }
+}
+__decorate([
+    enumerable(false)
+], Machine.prototype, "showName", null);
+const trator = new Machine("trator");
+console.log(trator);
