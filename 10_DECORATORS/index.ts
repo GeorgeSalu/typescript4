@@ -42,3 +42,23 @@ class MultiplesDecorators {
 
 const multiple = new MultiplesDecorators()
 multiple.testing()
+
+// 3 - class decorator
+function classDec(constructor: Function) {
+  console.log(constructor)
+  if(constructor.name === "User") {
+    console.log("criando usuario")
+  }
+}
+
+@classDec
+class User {
+  name
+
+  constructor(name: string) {
+    this.name = name
+  }
+}
+
+const matheus = new User("matheus")
+console.log(matheus)

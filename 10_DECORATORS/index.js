@@ -47,3 +47,20 @@ __decorate([
 ], MultiplesDecorators.prototype, "testing", null);
 const multiple = new MultiplesDecorators();
 multiple.testing();
+// 3 - class decorator
+function classDec(constructor) {
+    console.log(constructor);
+    if (constructor.name === "User") {
+        console.log("criando usuario");
+    }
+}
+let User = class User {
+    constructor(name) {
+        this.name = name;
+    }
+};
+User = __decorate([
+    classDec
+], User);
+const matheus = new User("matheus");
+console.log(matheus);
