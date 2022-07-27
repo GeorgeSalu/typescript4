@@ -18,3 +18,27 @@ class myClass {
 
 const myObj = new myClass();
 myObj.testing()
+
+// 2 - multiploes decorators
+function a() {
+  return function(target: any, propertKey: string, descriptor: PropertyDescriptor) {
+    console.log("executando a")
+  }
+}
+
+function b() {
+  return function(target: any, propertKey: string, descriptor: PropertyDescriptor) {
+    console.log("executando b")
+  }
+}
+
+class MultiplesDecorators {
+  @a()
+  @b()
+  testing() {
+    console.log("terminando execução")
+  }
+}
+
+const multiple = new MultiplesDecorators()
+multiple.testing()
