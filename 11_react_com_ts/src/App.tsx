@@ -9,6 +9,7 @@ import Destructuring from './components/Destruturing';
 
 // 6 - useState
 import State from './components/State';
+import { Category } from './components/Destruturing';
 
 function App() {
   // 1 - variaveis
@@ -34,7 +35,7 @@ function App() {
       <p>{userGreeting("maria")}</p>
       <FirstComponent />
       <SecondComponents name='george' />
-      <Destructuring title='primeiro post' content='algum conteudo' commentsQty={10} tags={["js", "java"]} />
+      <Destructuring title='primeiro post' content='algum conteudo' commentsQty={10} tags={["js", "java"]} category={Category.TS} />
       <State />
     </div>
   );
