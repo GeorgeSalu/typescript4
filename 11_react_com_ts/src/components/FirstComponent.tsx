@@ -1,12 +1,11 @@
-import * as React from 'react';
+import { ReactElement } from "react";
 
-export interface IAppProps {
-}
-
-export function App () {
+function FirstComponent (): ReactElement {
   return (
     <div>
       <h1>Meu primeiro componente</h1>
     </div>
   );
 }
+
+export default FirstComponent
