@@ -10,9 +10,19 @@ import Destructuring from './components/Destruturing';
 // 6 - useState
 import State from './components/State';
 import { Category } from './components/Destruturing';
+import { createContext } from 'react';
 
 // 8 - type
 type textOrNull = string | null
+
+// 9 - context
+interface IAppContext {
+  language: string;
+  framework: string;
+  project: number
+}
+
+export const AppContext = createContext<IAppContext | null>(null)
 
 function App() {
   // 1 - variaveis
@@ -29,23 +39,32 @@ function App() {
   const myText:textOrNull = "tem algum texto aqui"
   let mySecondText: textOrNull = null
 
+  // 9 - context
+  const contextValue: IAppContext = {
+    language: "javascript",
+    framework: "express",
+    project: 5,
+  }
+
   return (
-    <div className="App">
-      <h1>Typescript com react</h1>
-      <h2>Nome: {name}</h2>
-      <h2>Idade: {age}</h2>
-      {isWorking && (
-        <div>
-          <p>Esta trabalhando</p>
-        </div>
-      )}
-      <p>{userGreeting("maria")}</p>
-      <FirstComponent />
-      <SecondComponents name='george' />
-      <Destructuring title='primeiro post' content='algum conteudo' commentsQty={10} tags={["js", "java"]} category={Category.TS} />
-      <State />
-      {myText}
-    </div>
+    <AppContext.Provider value={contextValue}>
+      <div className="App">
+        <h1>Typescript com react</h1>
+        <h2>Nome: {name}</h2>
+        <h2>Idade: {age}</h2>
+        {isWorking && (
+          <div>
+            <p>Esta trabalhando</p>
+          </div>
+        )}
+        <p>{userGreeting("maria")}</p>
+        <FirstComponent />
+        <SecondComponents name='george' />
+        <Destructuring title='primeiro post' content='algum conteudo' commentsQty={10} tags={["js", "java"]} category={Category.TS} />
+        <State />
+        {myText}
+      </div>
+    </AppContext.Provider>
   );
 }
 
