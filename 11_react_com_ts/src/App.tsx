@@ -3,6 +3,10 @@ import './App.css';
 // 4 - importacao de componentes
 import FirstComponent from './components/FirstComponent';
 
+// 5 - desestruturando props
+import SecondComponents from './components/SecondComponents';
+import Destructuring from './components/Destruturing';
+
 function App() {
   // 1 - variaveis
   const name: string = "george"
@@ -26,6 +30,8 @@ function App() {
       )}
       <p>{userGreeting("maria")}</p>
       <FirstComponent />
+      <SecondComponents name='george' />
+      <Destructuring title='primeiro post' content='algum conteudo' commentsQty={10} tags={["js", "java"]} />
     </div>
   );
 }
