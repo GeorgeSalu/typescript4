@@ -1,5 +1,8 @@
 import './App.css';
 
+// 4 - importacao de componentes
+import FirstComponent from './components/FirstComponent';
+
 function App() {
   // 1 - variaveis
   const name: string = "george"
@@ -22,6 +25,7 @@ function App() {
         </div>
       )}
       <p>{userGreeting("maria")}</p>
+      <FirstComponent />
     </div>
   );
 }
