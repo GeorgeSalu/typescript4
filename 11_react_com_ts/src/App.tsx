@@ -11,6 +11,7 @@ import Destructuring from './components/Destruturing';
 import State from './components/State';
 import { Category } from './components/Destruturing';
 import { createContext } from 'react';
+import Context from './components/Context';
 
 // 8 - type
 type textOrNull = string | null
@@ -63,6 +64,7 @@ function App() {
         <Destructuring title='primeiro post' content='algum conteudo' commentsQty={10} tags={["js", "java"]} category={Category.TS} />
         <State />
         {myText}
+        <Context />
       </div>
     </AppContext.Provider>
   );
