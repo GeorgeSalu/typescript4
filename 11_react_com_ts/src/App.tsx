@@ -7,6 +7,9 @@ import FirstComponent from './components/FirstComponent';
 import SecondComponents from './components/SecondComponents';
 import Destructuring from './components/Destruturing';
 
+// 6 - useState
+import State from './components/State';
+
 function App() {
   // 1 - variaveis
   const name: string = "george"
@@ -32,6 +35,7 @@ function App() {
       <FirstComponent />
       <SecondComponents name='george' />
       <Destructuring title='primeiro post' content='algum conteudo' commentsQty={10} tags={["js", "java"]} />
+      <State />
     </div>
   );
 }
