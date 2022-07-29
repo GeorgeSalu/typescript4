@@ -154,3 +154,35 @@ const newBook = new Book(12);
 const newPen = new Pen(1);
 console.log(newBook);
 console.log(newPen);
+// 8 - exemplo real method decorator
+function checkIfUserPosted() {
+    return function (target, key, descriptor) {
+        const childFunction = descriptor.value;
+        console.log(childFunction);
+        descriptor.value = function (...args) {
+            if (args[1] === true) {
+                console.log("usuario ja postou");
+                return null;
+            }
+            else {
+                return childFunction.apply(this, args);
+            }
+        };
+        return descriptor;
+    };
+}
+class Post {
+    constructor() {
+        this.alreadyPosted = false;
+    }
+    post(content, alreadyPosted) {
+        this.alreadyPosted = true;
+        console.log(`post do usuario : ${content}`);
+    }
+}
+__decorate([
+    checkIfUserPosted()
+], Post.prototype, "post", null);
+const newPost = new Post();
+newPost.post("meu primeiro post", newPost.alreadyPosted);
+newPost.post("meu primeiro post", newPost.alreadyPosted);

@@ -171,3 +171,34 @@ const newPen = new Pen(1)
 
 console.log(newBook)
 console.log(newPen)
+
+// 8 - exemplo real method decorator
+function checkIfUserPosted() {
+  return function(target: Object, key: string | Symbol, descriptor: PropertyDescriptor) {
+    const childFunction = descriptor.value
+    console.log(childFunction)
+    descriptor.value = function(...args: any[]) {
+      if(args[1] === true) {
+        console.log("usuario ja postou")
+        return null
+      } else {
+        return childFunction.apply(this, args)
+      }
+    }
+    return descriptor
+  }
+}
+
+class Post {
+  alreadyPosted = false
+
+  @checkIfUserPosted()
+  post(content: string, alreadyPosted: boolean) {
+    this.alreadyPosted = true
+    console.log(`post do usuario : ${content}`)
+  }
+}
+
+const newPost = new Post()
+newPost.post("meu primeiro post", newPost.alreadyPosted);
+newPost.post("meu primeiro post", newPost.alreadyPosted);
