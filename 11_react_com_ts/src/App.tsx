@@ -11,6 +11,9 @@ import Destructuring from './components/Destruturing';
 import State from './components/State';
 import { Category } from './components/Destruturing';
 
+// 8 - type
+type textOrNull = string | null
+
 function App() {
   // 1 - variaveis
   const name: string = "george"
@@ -21,6 +24,10 @@ function App() {
   const userGreeting = (name: string): string => {
     return `Ola, ${name}`
   }
+
+  // 8 - type
+  const myText:textOrNull = "tem algum texto aqui"
+  let mySecondText: textOrNull = null
 
   return (
     <div className="App">
@@ -37,6 +44,7 @@ function App() {
       <SecondComponents name='george' />
       <Destructuring title='primeiro post' content='algum conteudo' commentsQty={10} tags={["js", "java"]} category={Category.TS} />
       <State />
+      {myText}
     </div>
   );
 }
