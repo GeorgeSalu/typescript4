@@ -13,7 +13,7 @@ const TaskForm = ({btnText}: Props) => {
       </div>
       <div className={styles.input_container}>
         <label htmlFor="difficulty">Dificuldade:</label>
-        <input type="text" name="difficulty" placeholder="dificulade da tarefa" />
+        <input type="text" name="difficulty" placeholder="dificuldade da tarefa" />
       </div>
       <input type="submit" value={btnText} />
     </form>
