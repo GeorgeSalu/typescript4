@@ -1,7 +1,6 @@
 import styles from './TaskForm.module.css'
 import React, { ChangeEvent, FormEvent, useState } from 'react';
 import {ITask} from "../interfaces/Task"
-import TaskList from './TaskList';
 
 interface Props {
   btnText: string
