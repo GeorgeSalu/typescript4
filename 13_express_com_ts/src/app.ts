@@ -92,6 +92,14 @@ app.get("/api/user/:id/access", checkUser, (req: Request, res: Response) => {
   return res.json({ msg: "bem-vindo a area adiminstrativa" })
 })
 
+// 12 - re e res com generics
+app.get("/api/user/:id/details/:name", (req: Request<{id: string, name: string}>, res: Response<{status: boolean}>) => {
+  console.log(`id : ${req.params.id} `)
+  console.log(`Name : ${req.params.name} `)
+
+  return res.json({status: true})
+})
+
 app.listen(3000, () => {
   console.log("aplicação de ts + express funcionando")
 })
