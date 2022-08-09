@@ -47,6 +47,13 @@ app.get("/api/json", (req: Request, res: Response) => {
   })
 })
 
+// 7 - router parameters
+app.get("/api/product/:id", (req: Request, res: Response) => {
+  console.log(req.params)
+
+  return res.send("produto nao encontrado")
+})
+
 app.listen(3000, () => {
   console.log("aplicação de ts + express funcionando")
 })
