@@ -2,7 +2,7 @@
 //console.log("express + ts !!")
 
 // 2 - init express
-import express, {Request, Response} from 'express'
+import express, {Request, Response, NextFunction} from 'express'
 import { read } from 'fs'
 
 const app = express()
@@ -70,6 +70,19 @@ function getUser(req: Request, res: Response) {
 // 9 - router handle
 app.get("/api/user/:id", getUser)
 
+// 10 - middleware
+function checkUser(req: Request, res: Response, next: NextFunction ) {
+  if(req.params.id === "1") {
+    console.log("pode seguir")
+    next();
+  } else {
+    console.log("acesso restrito")
+  }
+}
+
+app.get("/api/user/:id/access", checkUser, (req: Request, res: Response) => {
+  return res.json({ msg: "bem-vindo a area adiminstrativa" })
+})
 
 app.listen(3000, () => {
   console.log("aplicação de ts + express funcionando")
