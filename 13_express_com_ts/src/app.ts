@@ -63,6 +63,14 @@ app.get("/api/product/:id/review/:reviewId", (req: Request, res: Response) => {
   return res.send(`acessando review ${reviewId} do produto ${productId}`)
 })
 
+function getUser(req: Request, res: Response) {
+  console.log(`resgatando o usuario com id : ${req.params.id}`)
+}
+
+// 9 - router handle
+app.get("/api/user/:id", getUser)
+
+
 app.listen(3000, () => {
   console.log("aplicação de ts + express funcionando")
 })
