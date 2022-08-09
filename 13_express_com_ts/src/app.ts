@@ -2,7 +2,8 @@
 //console.log("express + ts !!")
 
 // 2 - init express
-import express from 'express'
+import express, {Request, Response} from 'express'
+import { read } from 'fs'
 
 const app = express()
 
@@ -29,6 +30,11 @@ app.all("/api/product/check", (req, res) => {
   } else {
     return res.send("nao podemos realizar esta operacao")
   }
+})
+
+// 5 - interface do express
+app.get("/api/interfaces", (req: Request, res: Response) => {
+  return res.send("utilizando as interfaces")
 })
 
 app.listen(3000, () => {
