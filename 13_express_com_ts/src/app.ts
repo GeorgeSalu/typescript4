@@ -100,6 +100,19 @@ app.get("/api/user/:id/details/:name", (req: Request<{id: string, name: string}>
   return res.json({status: true})
 })
 
+
+// 13 - tratando erros
+app.get("/api/error", (req: Request, res: Response) => {
+  try {
+    // a nossa logica
+    throw new Error('algo deu errado')
+  } catch (e: any) {
+    res.statusCode = 500
+    res.json({msg: e.message})
+  }
+})
+
+
 app.listen(3000, () => {
   console.log("aplicação de ts + express funcionando")
 })
