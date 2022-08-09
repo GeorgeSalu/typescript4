@@ -10,6 +10,14 @@ const app = express()
 // 3 - rota com post
 app.use(express.json())
 
+// 11 - middleware para todas as rotass
+function showPath(req: Request, res: Response, next: NextFunction ) {
+  console.log(req.path)
+  next()
+}
+
+app.use(showPath)
+
 app.get("/", (req, res) => {
   return res.send("hello express")
 })
